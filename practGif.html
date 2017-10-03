@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GifTastic</title>
+</head>
+<body>
+<div class="styles">
+	  <h1>Choose your CAR</h1>
+	<div id="buttonsView"></div>
+
+	  <form id="express-form">
+	    <label for="express-input">Add CAR</label>
+	    <input type="text" id="express-input" >
+	    -->
+	    <input id="addExpress" type="submit" value="Submit">
+	  </form>
+
+
+	  <!-- Gifs will Go here -->
+	  <div id="expressView" data-state="still" ></div>
+	  </div>
+	  <div id="expressDiv"></div>
+</div>   
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$("button").on("click",function() {
+		var topics = ['ferrari', 'bently', 'jaguar', 'Lamborghini', 'cadillac', 'mustang', 'challenger', 'camaro','audi'];
+		var car = $(this).attr("data-car");
+		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=10";
+		$.ajax({
+			url: queryURL,
+			method: "GET",
+		}) .done(function(response) {
+			console.log(queryURL);
+			console.log(response);
+			var results = response.data;
+
+			for(var i = 0; i < results.length; i++) {
+				var carDiv = $("<div>");
+				var p = $("<p>").text("Rating:" + results[i].images.fixed_height.url);
+				carDiv.append(p);
+				carDiv.append(carImage);
+				$("#gifs-appear-here").prepend(carDiv);
+			}
+		});
+	});
+
+</script>
+
+</body>
+</html>

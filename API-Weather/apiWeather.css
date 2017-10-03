@@ -1,0 +1,14 @@
+body{
+	background: url("/Users/Jaymar/Desktop/smu class activitities/dallas.jpg");
+}
+#weather-image{
+	max-width: 100%
+	height: 100%;
+}
+.row{
+	text-align:center;
+	line-height: 50px;
+	color: white;
+	font-size: 20pt;
+	font-style: bold;
+}

@@ -1,0 +1,41 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<title>GifTastic</title>
+<style type="text/css">
+	body{background-image: url(./smu/lambo.jpg);
+		}
+</style>
+<link rel="icon" type="image/gif" href="./smu/lambo.jpg"/>
+</head>
+<body id="color">
+
+<div class="container">
+	<div class="styles">
+	  <h1>Gif-Car-Maniac</h1>
+
+	  <!-- Buttons will go Here  -->
+	  <div id="buttonsView"></div>
+
+	  <form id="express-form">
+	    <label for="express-input">Add an a car</label>
+	    <input type="text" id="express-input" >
+	    
+	    <!-- Button triggers new gifs to be added -->
+	    <input id="addExpress" type="submit" value="Submit">
+	  </form>
+
+
+	  <!-- Gifs will Go here -->
+	  <div id="expressView" data-state="still" ></div>
+	  </div>
+	  <div id="expressDiv"></div>
+</div> 
+
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+<script type="text/javascript" src="gif.js"></script> 
+</body>
+</html>
