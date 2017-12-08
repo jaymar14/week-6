@@ -1,5 +1,5 @@
 body{
-	background: url("/Users/Jaymar/Desktop/smu class activitities/dallas.jpg");
+	background: url("./dallas.jpg");
 }
 #weather-image{
 	max-width: 100%
